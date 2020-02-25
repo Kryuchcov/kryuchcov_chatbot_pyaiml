@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0.1" encoding="UTF-8">
    <category>
       <pattern>MY DOGS NAME IS *</pattern>

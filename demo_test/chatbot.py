@@ -3,11 +3,11 @@ import aiml
 
 #Create the kernel and learn AIML files or load a brain file
 kernel=aiml.Kernel()
-if os.path.isfile('aiml_files/bot_brain.brn'):
-    kernel.bootstrap(brainFile='aiml_files/bot_brain.brn')
+if os.path.isfile('bot_brain.brn'):
+    kernel.bootstrap(brainFile='bot_brain.brn')
 else:
-    kernel.bootstrap(learnFiles='std-startup.xml',commands='load aiml b')
-    kernel.saveBrain('aiml_files/bot_brain.brn')
+    kernel.bootstrap(learnFiles='startup.xml',commands='load aiml b')
+    kernel.saveBrain('bot_brain.brn')
 
 #Press CTRL-C to break this loop
 while True:
@@ -19,3 +19,4 @@ while True:
     else:
         bot_response=kernel.respond(message)
         #Do something with bot_response
+        print(bot_response)
